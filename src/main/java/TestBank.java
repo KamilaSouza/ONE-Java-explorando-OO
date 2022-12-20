@@ -1,15 +1,14 @@
 public class TestBank {
     public static void main(String[] args) {
-        Client client = new Client();
-        client.name = "Kamila";
-        client.cpf = "123456789";
-        client.profession = "dev";
+        Client client = new Client("Kamila", "123456789", "dev");
+        Client client1 = new Client("Noah", "123456789", "sleeper");
 
-        Account account = new Account();
+        Account account = new Account(100, 15, 105, client);
         account.deposit(150);
 
-        account.owner = client;
-        System.out.println(account.owner.name);
+        Account account1 = new Account(100, 13, 103, client1);
+
+        System.out.println("Number of accounts:" + Account.getTotalAccounts());
     }
 
 }
