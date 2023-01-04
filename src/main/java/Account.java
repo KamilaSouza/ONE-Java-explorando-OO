@@ -6,24 +6,17 @@ public class Account {
 
     private static int totalAccounts = 0;
 
-    public Account(double balance, int agency, int number, Client owner) {
+    public Account(int agency, int number) {
         totalAccounts++;
-        this.balance = balance;
-        if (agency < 0) {
-            System.out.println("Can not be smaller than 0.");
-        } else {
-            this.agency = agency;
-        }
+        System.out.println("Total accounts: " + totalAccounts);
+        this.agency = agency;
         this.number = number;
-        this.owner = owner;
+        this.balance = 100;
+        System.out.println("Creating account number: " + this.number);
     }
 
     public void deposit(double value) {
         this.balance += value;
-    }
-
-    public void setBalance(double balance) {
-        this.balance = balance;
     }
 
     public boolean withdraw(double value) {
@@ -36,20 +29,20 @@ public class Account {
     }
 
     public boolean transfer(double value, Account receiver) {
-        if (this.balance >= value) {
-            this.balance = this.balance - value;
+        if (this.withdraw(value)) {
             receiver.deposit(value);
             return true;
+        } else {
+            return false;
         }
-        return false;
     }
 
     public double getBalance() {
         return balance;
     }
 
-    public int getAgency() {
-        return agency;
+    public void setBalance(double balance) {
+        this.balance = balance;
     }
 
     public int getNumber() {
@@ -59,8 +52,22 @@ public class Account {
     public void setNumber(int number) {
         if (number < 0) {
             System.out.println("Can not be smaller than 0.");
+            return;
         } else {
             this.number = number;
+        }
+    }
+
+    public int getAgency() {
+        return agency;
+    }
+
+    public void setAgency(int agency) {
+        if (agency < 0) {
+            System.out.println("Can not be smaller than 0.");
+            return;
+        } else {
+            this.agency = agency;
         }
     }
 
