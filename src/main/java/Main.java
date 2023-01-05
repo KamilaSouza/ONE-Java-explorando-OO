@@ -11,5 +11,12 @@ public class Main {
 
         System.out.println("Current Account balance: " + currentAccount.getBalance());
         System.out.println("Savings Account balance: " + savingsAccount.getBalance());
+
+        Manager manager = new Manager();
+        Client client = new Client("Kam","123456789", "dev");
+        client.setPassword(3333);
+
+        InternalSystem internalSystem = new InternalSystem();
+        internalSystem.authenticate(client);
     }
 }

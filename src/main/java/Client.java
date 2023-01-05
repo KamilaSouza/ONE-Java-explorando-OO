@@ -1,8 +1,10 @@
-public class Client {
+public class Client implements Authentication {
 
     private String name;
     private String cpf;
     private String profession;
+
+    private int password;
 
     public Client(String name, String cpf, String profession) {
         this.name = name;
@@ -33,4 +35,20 @@ public class Client {
     public void setProfession(String profession) {
         this.profession = profession;
     }
+
+    @Override
+    public void setPassword(int password) {
+        this.password = password;
+
+    }
+
+    @Override
+    public boolean authenticate(int password) {
+        if (this.password == password) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 }

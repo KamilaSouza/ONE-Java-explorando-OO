@@ -1,10 +1,9 @@
-public class Manager extends Employee implements Authentication{
+public class Administrator extends Employee implements Authentication{
 
     private int password;
-
     @Override
-    public double getBonus(){
-        return super.getSalary();
+    public double getBonus() {
+        return 0;
     }
 
     @Override

@@ -1,12 +1,10 @@
-public class Employee {
-
+public abstract class Employee {
+// can not be instantiated (new)
     private String name;
     private String cpf;
     private double salary;
 
-    public double getBonus(){
-        return this.salary * 0.10;
-    }
+    public abstract double getBonus(); // the method is not implemented, need to be implemented in sons
 
     public String getName() {
         return name;
