@@ -1,6 +1,11 @@
 public class Administrator extends Employee implements Authentication{
 
-    private int password;
+    private AuthenticationE authenticationE;
+
+    public Administrator() {
+        this.authenticationE = new AuthenticationE();
+    }
+
     @Override
     public double getBonus() {
         return 0;
@@ -8,16 +13,11 @@ public class Administrator extends Employee implements Authentication{
 
     @Override
     public void setPassword(int password) {
-        this.password = password;
-
+        this.authenticationE.setPassword(password);
     }
 
     @Override
     public boolean authenticate(int password) {
-        if (this.password == password) {
-            return true;
-        } else {
-            return false;
-        }
+        return this.authenticationE.authenticate(password);
     }
 }

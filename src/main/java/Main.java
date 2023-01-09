@@ -7,6 +7,15 @@ public class Main {
         SavingsAccount savingsAccount = new SavingsAccount(222, 222);
         savingsAccount.deposit(100.0);
 
+        LifeAssurance lifeAssurance = new LifeAssurance();
+
+        TaxCalculator taxCalculator = new TaxCalculator();
+
+        taxCalculator.register(currentAccount);
+        taxCalculator.register(lifeAssurance);
+
+        System.out.println(taxCalculator.getTotalTax());
+
         currentAccount.transfer(50.0, savingsAccount);
 
         System.out.println("Current Account balance: " + currentAccount.getBalance());
@@ -20,3 +29,4 @@ public class Main {
         internalSystem.authenticate(client);
     }
 }
+// Herança - para reutilização de código, use composição; para polimorfismo, use interface.

@@ -3,8 +3,12 @@ public class Client implements Authentication {
     private String name;
     private String cpf;
     private String profession;
+    private AuthenticationE authenticationE;
 
-    private int password;
+    public Client(){
+       this.authenticationE = new AuthenticationE();
+
+    }
 
     public Client(String name, String cpf, String profession) {
         this.name = name;
@@ -38,17 +42,12 @@ public class Client implements Authentication {
 
     @Override
     public void setPassword(int password) {
-        this.password = password;
-
+        this.authenticationE.setPassword(password);
     }
 
     @Override
     public boolean authenticate(int password) {
-        if (this.password == password) {
-            return true;
-        } else {
-            return false;
-        }
+        return this.authenticationE.authenticate(password);
     }
 
 }
