@@ -10,9 +10,9 @@ public class CurrentAccount extends Account implements Tax {
     }
 
     @Override
-    public boolean withdraw(double value) {
+    public void withdraw(double value) throws InsufficientBalanceException {
         double withdrawValue = value + 0.20;
-        return super.withdraw(withdrawValue);
+        super.withdraw(withdrawValue);
     }
 
     @Override
