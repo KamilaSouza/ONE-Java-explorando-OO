@@ -1,3 +1,5 @@
+package br.com.bytebank.bank.model;
+
 public class Administrator extends Employee implements Authentication{
 
     private AuthenticationE authenticationE;

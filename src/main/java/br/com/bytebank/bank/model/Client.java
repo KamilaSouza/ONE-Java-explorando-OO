@@ -1,3 +1,5 @@
+package br.com.bytebank.bank.model;
+
 public class Client implements Authentication {
 
     private String name;

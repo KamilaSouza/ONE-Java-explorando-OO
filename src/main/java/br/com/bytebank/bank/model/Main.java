@@ -1,3 +1,11 @@
+package br.com.bytebank.bank.model;
+
+// Web Address, project name, package name
+// protected - heir
+
+/**
+ *
+ */
 public class Main {
     public static void main(String[] args) {
 

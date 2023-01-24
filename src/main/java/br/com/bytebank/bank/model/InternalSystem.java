@@ -1,3 +1,5 @@
+package br.com.bytebank.bank.model;
+
 public class InternalSystem {
 
     private int password = 3333;

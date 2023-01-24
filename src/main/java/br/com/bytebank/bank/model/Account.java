@@ -1,3 +1,9 @@
+package br.com.bytebank.bank.model;
+
+/**
+ * * Account Class
+ */
+
 public abstract class Account {
     protected double balance;
     private int agency;

@@ -1,3 +1,5 @@
+package br.com.bytebank.bank.model;
+
 public abstract class Employee {
 // can not be instantiated (new)
     private String name;
