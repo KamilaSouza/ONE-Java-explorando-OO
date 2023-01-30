@@ -1,5 +1,7 @@
 package br.com.bytebank.bank.model;
 
+import java.util.Objects;
+
 /**
  * * Account Class
  */
@@ -18,7 +20,19 @@ public abstract class Account {
         this.agency = agency;
         this.number = number;
         this.balance = 100;
-        System.out.println("Creating account number: " + this.number);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Account account = (Account) o;
+        return agency == account.agency && number == account.number;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(agency, number);
     }
 
     public abstract void deposit(double value);
@@ -79,5 +93,10 @@ public abstract class Account {
 
     public static int getTotalAccounts() {
         return totalAccounts;
+    }
+
+    @Override
+    public String toString() {
+        return "Number: " + this.number + ", Agency: " + this.agency;
     }
 }

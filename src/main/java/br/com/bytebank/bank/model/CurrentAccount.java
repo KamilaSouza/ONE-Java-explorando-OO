@@ -21,4 +21,11 @@ public class CurrentAccount extends Account implements Tax {
     public double getTaxValue() {
         return super.balance * 0.01;
     }
+
+    @Override
+    public String toString(){
+        return  "CurrentAccount, " + super.toString();
+    }
+
+
 }

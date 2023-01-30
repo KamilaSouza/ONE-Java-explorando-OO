@@ -7,8 +7,8 @@ public class Client implements Authentication {
     private String profession;
     private AuthenticationE authenticationE;
 
-    public Client(){
-       this.authenticationE = new AuthenticationE();
+    public Client() {
+        this.authenticationE = new AuthenticationE();
 
     }
 
