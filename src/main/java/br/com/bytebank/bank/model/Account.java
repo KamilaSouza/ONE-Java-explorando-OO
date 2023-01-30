@@ -30,11 +30,6 @@ public abstract class Account {
         return agency == account.agency && number == account.number;
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(agency, number);
-    }
-
     public abstract void deposit(double value);
 
     public void withdraw(double value) throws InsufficientBalanceException {
