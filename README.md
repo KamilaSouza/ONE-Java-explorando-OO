@@ -5,7 +5,8 @@ Trilha: Java e Orientação a Objetos T3 - ONE &#128218;
 
 Curso: Java OO - entendendo a Orientação a Objetos<br>
 Curso: Java Polimorfismo - entenda herança e interfaces<br>
-Curso: Java Exceções - aprenda a criar, lançar e controlar exceções
+Curso: Java Exceções - aprenda a criar, lançar e controlar exceções<br>
+Curso: Java e java.util - Coleções, Wrappers e Lambda expressions
 
 ______________________________________________________________
 Ferramentas utilizadas:
