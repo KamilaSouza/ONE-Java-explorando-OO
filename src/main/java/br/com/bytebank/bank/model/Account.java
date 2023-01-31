@@ -6,7 +6,7 @@ import java.util.Objects;
  * * Account Class
  */
 
-public abstract class Account {
+public abstract class Account implements Comparable<Account> {
     protected double balance;
     private int agency;
     private int number;
@@ -28,6 +28,11 @@ public abstract class Account {
         if (o == null || getClass() != o.getClass()) return false;
         Account account = (Account) o;
         return agency == account.agency && number == account.number;
+    }
+
+    @Override
+    public int compareTo(Account anotherAccount) {
+        return Double.compare(this.balance, anotherAccount.balance);
     }
 
     public abstract void deposit(double value);
